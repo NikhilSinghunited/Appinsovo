@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import classNames from "classnames";
+import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
 
 const offers = [
   "/sportoffer1.jpg",
@@ -45,10 +46,8 @@ const SportEvent = () => {
 
   return (
     <div
-      className="w-full  bg-center py-10 relative top-8"
-      style={{
-        backgroundImage: "url('/eventbg.png')",
-      }}
+      className="w-full  bg-center py-20 bg-[#f1e0e0] relative top-8"
+      
     >
       <div className="text-center mb-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
@@ -107,17 +106,17 @@ const SportEvent = () => {
         {/* Prev/Next Buttons */}
         <button
           onClick={handlePrev}
-          className="absolute top-1/2 -translate-y-1/2 left-2 bg-white p-2 rounded-full shadow hover:bg-gray-200"
+          className="absolute top-1/2 -translate-y-1/2 left-6 shadow-md bg-white p-2 rounded-full border border-gray-300 hover:bg-gray-200"
           disabled={currentIndex === 0}
         >
-          ◀
+        <MdOutlineArrowBackIos color="red"/>
         </button>
         <button
           onClick={handleNext}
-          className="absolute top-1/2 -translate-y-1/2 right-2 bg-white p-2 rounded-full shadow hover:bg-gray-200"
+          className="absolute top-1/2 -translate-y-1/2 right-6 bg-white p-2 rounded-full border border-gray-300 shadow-md hover:bg-gray-200"
           disabled={currentIndex === groupedData.length - 1}
         >
-          ▶
+        <MdOutlineArrowForwardIos color="red" />
         </button>
       </div>
     </div>

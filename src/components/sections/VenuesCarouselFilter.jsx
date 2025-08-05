@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
+import Image from 'next/image';
 
 export const sportsVenue = [
   {
@@ -11,7 +12,7 @@ export const sportsVenue = [
     distance: '3 kms',
     rating: 4.7,
     votes: 164,
-    image: '/images/tennis.jpg',
+    image: '/court-trufs.png',
   },
   {
     id: 2,
@@ -21,7 +22,7 @@ export const sportsVenue = [
     distance: '5 kms',
     rating: 4.7,
     votes: 164,
-    image: '/download.jfif',
+    image: '/tabele_tennis.png',
   },
   {
     id: 3,
@@ -31,7 +32,7 @@ export const sportsVenue = [
     distance: '4 kms',
     rating: 4.7,
     votes: 164,
-    image: '/download (1).jfif',
+    image: '/table_tennis.png',
   },
   {
     id: 4,
@@ -41,7 +42,7 @@ export const sportsVenue = [
     distance: '6 kms',
     rating: 4.6,
     votes: 98,
-    image: '/images/swimming.jpg',
+    image: '/swimming.png',
   },
   {
     id: 5,
@@ -51,7 +52,7 @@ export const sportsVenue = [
     distance: '7 kms',
     rating: 4.8,
     votes: 201,
-    image: '/images/lawntennis.jpg',
+    image: '/lawntennis.png',
   },
 ];
 
@@ -139,10 +140,12 @@ const VenueCarousel = () => {
               key={venue.id}
               className="min-w-[280px] mr-4 bg-white rounded-lg shadow-md"
             >
-              <img
+              <Image
                 src={venue.image}
                 alt={venue.name}
-                className="h-40 w-full object-cover rounded-t-lg"
+                width={280}
+                height={180}
+                className="h-20 w-full object-contain rounded-t-lg"
               />
               <div className="p-3">
                 <h3 className="text-lg font-semibold">{venue.name}</h3>

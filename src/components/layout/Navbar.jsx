@@ -8,9 +8,9 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white text-black w-full z-50 shadow">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
         {/* Left: Logo */}
-        <div className="flex items-center space-x-3">
+        <div className="w-[150px] flex items-center space-x-3">
           <div className="flex flex-col items-center">
             <Image
               src="/logo.png"
@@ -24,8 +24,8 @@ export default function Navbar() {
         </div>
 
         {/* Middle: Location Input & Links */}
-        <div className="hidden md:flex items-center space-x-8 flex-1 justify-center">
-          <form className="relative w-full max-w-xs">
+        <div className="hidden md:flex items-center w-[900px] space-x-10 justify-center">
+          <form className="relative w-full flex items-center gap-2">
             <img src='/address.png' className=''/>
             <input
               type="text"
@@ -42,9 +42,9 @@ export default function Navbar() {
 
           <a
             href="#"
-            className="text-sm font-medium hover:text-red-600 transition"
+            className="text-sm w-[200px] font-medium hover:text-red-600 transition"
           >
-            Gamehunt academy
+            Gamehunt Academy
           </a>
 
           <a

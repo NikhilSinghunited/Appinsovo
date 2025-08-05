@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md';
+
 
 const videoData = [
   "https://www.youtube.com/embed/VIDEO_ID1",
@@ -76,14 +78,14 @@ export default function OnlineSession() {
           className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white text-red-500 rounded-full shadow p-2 z-10"
           disabled={currentIndex === 0}
         >
-          &#10094;
+          <MdOutlineArrowBackIos color="red" />
         </button>
         <button
           onClick={handleNext}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white text-red-500 rounded-full shadow p-2 z-10"
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 border border-gray-400 bg-white text-red-500 rounded-full shadow p-2 z-10"
           disabled={currentIndex >= totalSlides - slidesPerView}
         >
-          &#10095;
+          <MdOutlineArrowForwardIos color="red" />
         </button>
       </div>
 
